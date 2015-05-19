@@ -3,6 +3,7 @@
 *.iml
 
 db.sqlite3
+__pycache__
 
 ## Directory-based project format:
 .idea/

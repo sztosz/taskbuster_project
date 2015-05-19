@@ -14,11 +14,12 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 from django.core.exceptions import ImproperlyConfigured
 
+
 def get_evn_varialble(var_name):
     try:
         return os.environ[var_name]
     except KeyError:
-        error_msg = "Enviroment variable {1} is not set".format(var_name)
+        error_msg = "Environment variable {1} is not set".format(var_name)
         raise ImproperlyConfigured(error_msg)
 
 
@@ -64,7 +65,7 @@ ROOT_URLCONF = 'taskbuster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,3 +110,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
