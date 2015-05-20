@@ -4,6 +4,8 @@
 
 db.sqlite3
 __pycache__
+htmlcov
+.coverage
 
 ## Directory-based project format:
 .idea/
@@ -46,4 +48,5 @@ atlassian-ide-plugin.xml
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
-crashlytics-build.properties
+crashlytics-build.properties.coverage
+

@@ -4,7 +4,6 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
 
 
-
 class HomeNewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
@@ -25,3 +24,11 @@ class HomeNewVisitorTest(StaticLiveServerTestCase):
         self.browser.get(self.get_full_url('home'))
         h1 = self.browser.find_element_by_tag_name('h1')
         self.assertEqual(h1.value_of_css_property('color'), 'rgba(200, 50, 255, 1)')
+
+    def test_robots_txt(self):
+        self.browser.get(self.live_server_url + '/robots.txt')
+        self.assertNotIn('Not Found', self.browser.title)
+
+    def test_humans_txt(self):
+        self.browser.get(self.live_server_url + '/humans.txt')
+        self.assertNotIn('Not Found', self.browser.title)

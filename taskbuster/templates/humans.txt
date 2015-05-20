@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Bartosz Nowak -- Web Developer -- @sztosz
 
 # THANKS
 
-    <name>
+    To Marina Mele for tutorial
 
 # TECHNOLOGY COLOPHON
-
+    Django
     HTML5, CSS3
     jQuery, Modernizr
