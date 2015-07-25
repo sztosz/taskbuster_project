@@ -15,6 +15,7 @@ import os
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
 
+
 def get_evn_varialble(var_name):
     try:
         return os.environ[var_name]
